@@ -73,6 +73,7 @@ body {
   font-weight: 700;
   display: inline-block;
   background-image: linear-gradient(to right, #55c57a, #28b485);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
@@ -178,13 +179,15 @@ body {
     left: 0;
     width: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
       background-color: white; }
     .card__side--back {
-      transform: rotateY(180deg); }
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
@@ -192,9 +195,11 @@ body {
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
-    transform: rotateY(-180deg); }
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg); }
   .card:hover .card__side--back {
-    transform: rotateY(0); }
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0); }
 
 .composition {
   position: relative; }
